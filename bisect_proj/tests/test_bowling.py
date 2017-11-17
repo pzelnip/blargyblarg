@@ -22,10 +22,6 @@ class TestBowling(unittest.TestCase):
         for i in range(n):
             self.game.roll(pins)
 
-    def _roll_many(self, n, pins):
-        for i in range(n):
-            self.game.roll(pins)
-
     def test_totally_bogus_contrived_failing_test(self):
         Game.foobar = 42
         self.assertEqual(42, self.game.foobar)
