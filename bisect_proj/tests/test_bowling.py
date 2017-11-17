@@ -14,12 +14,9 @@ class TestBowling(unittest.TestCase):
         self.assertEqual(0, self.game.score())
 
     def test_all_ones(self):
-        game = Game()
+        self._roll_many(20, 1)
 
-        for i in range(20):
-            game.roll(1)
-
-        self.assertEqual(20, game.score())
+        self.assertEqual(20, self.game.score())
 
     def _roll_many(self, n, pins):
         for i in range(n):
