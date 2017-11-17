@@ -8,6 +8,7 @@
 	- example of test runner suddenly breaking & finding bad test from months ago
 - showing gitconfig & aliases
 - git extras
+- git hooks
 - cherry picking for fun and profit
 
 ---------------
@@ -82,6 +83,8 @@ git bisect log
 git bisect reset
 ```
 
+-----------------
+
 ## .gitconfig And Aliases
 
 A .gitconfig file in your home directory controls various user-specific settings for git such as your name, email, etc.
@@ -97,6 +100,8 @@ Common use cases:
 - make git do things that are cray-cray via shell scripting
 
 _pro-tip_: on *nix systems if you create an executable command (shell script, etc) called "git-foo" then doing "git foo" will execute that script
+
+-----------------
 
 ## Git Extras
 
@@ -114,3 +119,15 @@ If on OSX can install via homebrew:
 brew install git-extras
 ```
 If not on OSX, well, you should be (or just go to https://github.com/tj/git-extras/blob/master/Installation.md to find instructions for your platform).
+
+-----------------------
+
+## git hooks
+
+Allows you to execute certain scripts, commands etc as part of a git command.  A common example is to run a command which inserts the current branch name into a commit message automatically.
+
+-----------------------
+
+## cherry picking for fun and profit
+
+Cherry picking allows you to take an arbitrary commit from a branch and apply it directly to another branch.  Also allows you to do crazy things like insert a commit in a series of commits.
