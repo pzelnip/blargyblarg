@@ -18,6 +18,15 @@ class TestBowling(unittest.TestCase):
 
         self.assertEqual(20, self.game.score())
 
+    def test_one_spare(self):
+        self.game.roll(5)
+        self.game.roll(5)  # spare
+        self.game.roll(3)
+
+        self._roll_many(17, 0)
+
+        self.assertEqual(16, self.game.score())
+
     def _roll_many(self, n, pins):
         for i in range(n):
             self.game.roll(pins)
