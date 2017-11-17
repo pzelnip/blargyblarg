@@ -9,10 +9,7 @@ class TestBowling(unittest.TestCase):
         self.game = Game()
 
     def test_gutter_game(self):
-        n = 20
-        pins = 0
-        for i in range(n):
-            self.game.roll(pins)
+        self._roll_many(20, 0)
 
         self.assertEqual(0, self.game.score())
 
@@ -23,3 +20,7 @@ class TestBowling(unittest.TestCase):
             game.roll(1)
 
         self.assertEqual(20, game.score())
+
+    def _roll_many(self, n, pins):
+        for i in range(n):
+            self.game.roll(pins)
