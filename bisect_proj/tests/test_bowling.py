@@ -19,8 +19,7 @@ class TestBowling(unittest.TestCase):
         self.assertEqual(20, self.game.score())
 
     def test_one_spare(self):
-        self.game.roll(5)
-        self.game.roll(5)  # spare
+        self._roll_spare()
         self.game.roll(3)
 
         self._roll_many(17, 0)
@@ -30,6 +29,10 @@ class TestBowling(unittest.TestCase):
     def _roll_many(self, n, pins):
         for i in range(n):
             self.game.roll(pins)
+
+    def _roll_spare(self):
+        self.game.roll(5)
+        self.game.roll(5)
 
     def test_totally_bogus_contrived_failing_test(self):
         Game.foobar = 42
